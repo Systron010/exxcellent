@@ -140,6 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="exxcellent.cpp" />
+    <ClCompile Include="WeatherDataClass.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WeatherDataClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
