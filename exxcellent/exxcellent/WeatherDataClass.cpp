@@ -1,8 +1,6 @@
 #include "WeatherDataClass.h"
-#include <fstream>
-#include <sstream> 
 
-// Weather data construtor
+
 WeatherDataClass::WeatherDataClass(string in_fileName, unsigned int in_verbose)
 {
 	fileName = in_fileName;
@@ -10,7 +8,6 @@ WeatherDataClass::WeatherDataClass(string in_fileName, unsigned int in_verbose)
 }
 
 
-// Read weather data from file
 void WeatherDataClass::ReadFile()
 {
 	cout << "# Read data from file: '" << fileName <<  "'" << endl;
@@ -21,7 +18,7 @@ void WeatherDataClass::ReadFile()
 
 	// Check if file exists
 	if (!file) {
-		cerr << "# Error: No such file found! Program stopped!";
+		cerr << "# ERROR: No such file found! Program stopped!";
 		exit(-1);
 	}
 	// Read file line by line if it exists
@@ -67,18 +64,19 @@ void WeatherDataClass::GetColumnNames(string currentLine)
 {
 	// Create a stringstream from current line
 	stringstream strStream(currentLine);
-	string colname;
+	string currentColname;
 
 	// Extract each column name
-	while (getline(strStream, colname, ',')) {
-		// Add columnNames
-		columnNames.push_back(colname);
+	while (getline(strStream, currentColname, ',')) {
+		// Add current column name
+		columnNames.push_back(currentColname);
 	}
 }
 
 void WeatherDataClass::PrintColumnNames()
 {
 	cout << "# Used column names:" << endl;
+	// Loop over all coulumn names
 	for (size_t i = 0; i < columnNames.size(); ++i) {
 		if (i < columnNames.size() - 1)
 			cout << columnNames.at(i) << ", ";
@@ -116,11 +114,23 @@ void WeatherDataClass::PrintAllValues()
 	cout << endl;
 	cout << "# Print all read values (Can be turned off with VERBOSE=0):" << endl;
 	PrintColumnNames();
+	// Loop over all days in 'vector<day> totalData'
 	for (size_t i = 0; i < totalData.size(); ++i) {
 		day currentDay = totalData.at(i);
-		cout << currentDay.day << "," << currentDay.MxT << "," << currentDay.MnT << "," << currentDay.AvT << "," << currentDay.AvDP << "," << currentDay.HrPTPcpn << "," 
-			 << currentDay.PDir << "," << currentDay.AvSp << "," << currentDay.Dir << "," << currentDay.MxS << "," << currentDay.SkyC << "," << currentDay.MxR << "," 
-			 << currentDay.Mn << "," << currentDay.RAvSLP;
+		cout << currentDay.day << "," 
+			 << currentDay.MxT << ","
+			 << currentDay.MnT << ","
+			 << currentDay.AvT << ","
+			 << currentDay.AvDP << ","
+			 << currentDay.HrPTPcpn << "," 
+			 << currentDay.PDir << ","
+			 << currentDay.AvSp << ","
+			 << currentDay.Dir << ","
+			 << currentDay.MxS << ","
+			 << currentDay.SkyC << ","
+			 << currentDay.MxR << "," 
+			 << currentDay.Mn << ","
+			 << currentDay.RAvSLP;
 		cout << endl;
 	}
 	cout << "# End of data set." << endl;
@@ -129,7 +139,7 @@ void WeatherDataClass::PrintAllValues()
 
 void WeatherDataClass::FindDaySmallestTempSpread()
 {
-	cout << "# Find day with the smallest tempretur spread." << endl;
+	cout << "# Find day with the smallest temperature spread." << endl;
 
 }
 

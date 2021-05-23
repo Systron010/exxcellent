@@ -7,21 +7,19 @@
 #include <iostream>
 #include <string>
 
-
-// Include own classes
+// Include own written classes
 #include "WeatherDataClass.h"
 
 // Use std namespace
 using namespace std;
 
-//Verbose Level: 1: show all, 0: show minimum
-const unsigned int VERBOSE = 1;
-
 // Settings and constants
 const string FILENAME_WEATHER = "./../../data/weather.csv";
 const string FILENAME_FOOTBALL = "./../../data/football.csv";
+//Verbose Level: 1: show all, 0: show minimum
+const unsigned int VERBOSE = 1;
 
-
+// Main funton
 int main()
 {
    cout << "# Programm started." << endl;

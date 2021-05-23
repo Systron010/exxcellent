@@ -2,9 +2,12 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <sstream> 
 // Use std namespace
 using namespace std;
 
+// Define weather data class
 class WeatherDataClass
 {
 
