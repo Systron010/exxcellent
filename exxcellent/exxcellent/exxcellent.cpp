@@ -6,6 +6,8 @@
 // Include Standard libraries
 #include <iostream>
 #include <string>
+
+
 // Include own classes
 #include "WeatherDataClass.h"
 
@@ -13,21 +15,29 @@
 using namespace std;
 
 //Verbose Level: 1: show all, 0: show minimum
-const int VERBOSE = 1;
+const unsigned int VERBOSE = 1;
 
 // Settings and constants
-const string FILENAME_WEATHER = "";
-const string FILENAME_FOOTBALL = "";
+const string FILENAME_WEATHER = "./../../data/weather.csv";
+const string FILENAME_FOOTBALL = "./../../data/football.csv";
 
 
 int main()
 {
-   cout << "Programm started." << endl;
+   cout << "# Programm started." << endl;
+
 
    // Create weather data class
    WeatherDataClass* weatherData = new WeatherDataClass(FILENAME_WEATHER, VERBOSE);
+   // Read input file
+   weatherData->ReadFile();
+   // Print all values if wanted
+   if (VERBOSE == 1)
+	   weatherData->PrintAllValues();
+   // Search day with smallest temp spread
+   weatherData->FindDaySmallestTempSpread();
 
 
-   cout << "Programm successfully finished." << endl;
+   cout << "# Programm successfully finished." << endl;
    return 0;
 }
