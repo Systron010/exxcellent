@@ -8,24 +8,24 @@ WeatherDataClass::WeatherDataClass(string in_fileName)
 }
 
 
-void WeatherDataClass::SaveAllValuesPerLine(vector<float> allValuesCurrentDay)
+void WeatherDataClass::SaveAllValuesPerLine(vector<float> allValuesCurrentLine)
 {
 	// Create current day struct
 	dayData currentDay;
-	currentDay.day		= static_cast<unsigned short int>(allValuesCurrentDay.at(0));
-	currentDay.MxT		= allValuesCurrentDay.at(1);
-	currentDay.MnT		= allValuesCurrentDay.at(2);
-	currentDay.AvT		= allValuesCurrentDay.at(3);
-	currentDay.AvDP		= allValuesCurrentDay.at(4);
-	currentDay.HrPTPcpn = allValuesCurrentDay.at(5);
-	currentDay.PDir		= allValuesCurrentDay.at(6);
-	currentDay.AvSp		= allValuesCurrentDay.at(7);
-	currentDay.Dir		= allValuesCurrentDay.at(8);
-	currentDay.MxS		= allValuesCurrentDay.at(9);
-	currentDay.SkyC		= allValuesCurrentDay.at(10);
-	currentDay.MxR		= allValuesCurrentDay.at(11);
-	currentDay.Mn		= allValuesCurrentDay.at(12);
-	currentDay.RAvSLP	= allValuesCurrentDay.at(13);
+	currentDay.day		= static_cast<unsigned short int>(allValuesCurrentLine.at(0));
+	currentDay.MxT		= allValuesCurrentLine.at(1);
+	currentDay.MnT		= allValuesCurrentLine.at(2);
+	currentDay.AvT		= allValuesCurrentLine.at(3);
+	currentDay.AvDP		= allValuesCurrentLine.at(4);
+	currentDay.HrPTPcpn = allValuesCurrentLine.at(5);
+	currentDay.PDir		= allValuesCurrentLine.at(6);
+	currentDay.AvSp		= allValuesCurrentLine.at(7);
+	currentDay.Dir		= allValuesCurrentLine.at(8);
+	currentDay.MxS		= allValuesCurrentLine.at(9);
+	currentDay.SkyC		= allValuesCurrentLine.at(10);
+	currentDay.MxR		= allValuesCurrentLine.at(11);
+	currentDay.Mn		= allValuesCurrentLine.at(12);
+	currentDay.RAvSLP	= allValuesCurrentLine.at(13);
 
 	// Save current day struct to 'vector<dayData> totalDayData'
 	totalDayData.push_back(currentDay);

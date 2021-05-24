@@ -30,7 +30,7 @@ private:
 		unsigned int draws;
 		int goals; // Maybe negativ value possible due to penalty
 		int goalsAllowed; // Maybe negativ value possible due to penalty
-		int Points; // Maybe negativ value possible due to penalty
+		int points; // Maybe negativ value possible due to penalty
 		bool operator<(const teamData& other) // <Operator to search for minimum in goal distance (Mxt-MnT)
 		{
 			unsigned int value1 = abs(goals - goalsAllowed);
@@ -38,6 +38,8 @@ private:
 			return value1 < value2;
 		}
 	};
+	vector<teamData> totalTeamData; // The data of all teams, which means all teams in the file 'fileName'
+	void SaveAllValuesPerLine(vector<float> allValuesCurrentLine); // Function to save all read values of one line (one day) to 'vector<dayData> totalDayData'
 
 public:
 	FootballDataClass(string in_fileName); // Class Constructor

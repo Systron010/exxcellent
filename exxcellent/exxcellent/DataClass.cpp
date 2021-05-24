@@ -126,7 +126,7 @@ void DataClass::ReadEachLine_CSV(fstream& file, string currentLine)
 
 void DataClass::CheckNumberOfColumnsAndSave(unsigned int currentNumCol, vector<float> allValuesCurrentLine)
 {
-	if (currentNumCol == numColumns) {
+	if (currentNumCol == numColumns || true) {
 		SaveAllValuesPerLine(allValuesCurrentLine);
 	}
 	else if (currentNumCol < numColumns) {

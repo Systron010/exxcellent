@@ -37,6 +37,8 @@ int main()
 
    // Create football data class
    FootballDataClass* footballData = new FootballDataClass(FILENAME_FOOTBALL);
+   // Read input file
+   footballData -> ReadFile();
 
    cout << endl;
    cout << "# Program successfully finished." << endl;
