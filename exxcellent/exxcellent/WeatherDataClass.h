@@ -40,16 +40,18 @@ private:
 		float RAvSLP;
 		bool operator<(const dayData& other) // <Operator to search for minimum in temperatur spread (Mxt-MnT)
 		{
-			return MxT - MnT < other.MxT - other.MnT;
+			int value1 = MxT - MnT;
+			int value2 = other.MxT - other.MnT;
+			return value1 < value2;
 		}
 	};
 	vector<dayData> totalDayData; // The data of all days, which means all days in the file 'fileName'
 	vector<dayData>::iterator minTempSpreadDay; // Vector with the data for the day with the smallest temperatur spread (This is the solution of the weather challenge)
-	void SaveAllValuesPerLine(vector<float> allValuesCurrentLine); // Function to save all read values of one line (one day) to 'vector<dayData> totalDayData'
+	void ParsingLineAndSaveValues_CSV(string currentLine); // Function for parsing the current string line from the csv file and save the values to "struct dayData". Override the function from DataClass.
 	
 public:
 	WeatherDataClass(string in_fileName); // Class Constructor
-	void PrintAllValues(); // Function to print all read values to console
+	void PrintAllValues(); // Function to print all read values to console. Override the function from DataClass.
 	void FindDayWithSmallestTempSpread(); // Function to find the day with the smallest temperatur spread (This is the goal of the weather challenge)
 
 };

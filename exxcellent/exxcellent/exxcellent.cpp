@@ -39,6 +39,11 @@ int main()
    FootballDataClass* footballData = new FootballDataClass(FILENAME_FOOTBALL);
    // Read input file
    footballData -> ReadFile();
+   // Print all values if VERBOSE==1
+   if (VERBOSE == 1)
+	   footballData -> PrintAllValues();
+   // Search team with the smallest distance
+   footballData -> FindTeamWithSmallestDistance();
 
    cout << endl;
    cout << "# Program successfully finished." << endl;

@@ -8,26 +8,45 @@ WeatherDataClass::WeatherDataClass(string in_fileName)
 }
 
 
-void WeatherDataClass::SaveAllValuesPerLine(vector<float> allValuesCurrentLine)
+void WeatherDataClass::ParsingLineAndSaveValues_CSV(string currentLine)
 {
-	// Create current day struct
-	dayData currentDay;
-	currentDay.day		= static_cast<unsigned short int>(allValuesCurrentLine.at(0));
-	currentDay.MxT		= allValuesCurrentLine.at(1);
-	currentDay.MnT		= allValuesCurrentLine.at(2);
-	currentDay.AvT		= allValuesCurrentLine.at(3);
-	currentDay.AvDP		= allValuesCurrentLine.at(4);
-	currentDay.HrPTPcpn = allValuesCurrentLine.at(5);
-	currentDay.PDir		= allValuesCurrentLine.at(6);
-	currentDay.AvSp		= allValuesCurrentLine.at(7);
-	currentDay.Dir		= allValuesCurrentLine.at(8);
-	currentDay.MxS		= allValuesCurrentLine.at(9);
-	currentDay.SkyC		= allValuesCurrentLine.at(10);
-	currentDay.MxR		= allValuesCurrentLine.at(11);
-	currentDay.Mn		= allValuesCurrentLine.at(12);
-	currentDay.RAvSLP	= allValuesCurrentLine.at(13);
+	// Convert currentLine string into istringstream
+	string comma_string;
+	std::istringstream textStream(currentLine);
 
-	// Save current day struct to 'vector<dayData> totalDayData'
+	// Create current dayData struct
+	dayData currentDay;
+
+	// parsing the line to the dayData struct. All values are int
+	textStream >> currentDay.day;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.MxT;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.MnT;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.AvT;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.AvDP;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.HrPTPcpn;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.PDir;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.AvSp;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.Dir;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.MxS;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.SkyC;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.MxR;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.Mn;
+	getline(textStream, comma_string, SEPARATOR);
+	textStream >> currentDay.RAvSLP;
+
+	// Save currentDay struct to 'vector<dayData> totalDayData'
 	totalDayData.push_back(currentDay);
 }
 
@@ -40,19 +59,19 @@ void WeatherDataClass::PrintAllValues()
 	// Loop over all days in 'vector<dayData> totalDayData'
 	for (size_t i = 0; i < totalDayData.size(); ++i) {
 		dayData currentDay = totalDayData.at(i);
-		cout << currentDay.day		<< "," 
-			 << currentDay.MxT		<< ","
-			 << currentDay.MnT		<< ","
-			 << currentDay.AvT		<< ","
-			 << currentDay.AvDP		<< ","
-			 << currentDay.HrPTPcpn << "," 
-			 << currentDay.PDir		<< ","
-			 << currentDay.AvSp		<< ","
-			 << currentDay.Dir		<< ","
-			 << currentDay.MxS		<< ","
-			 << currentDay.SkyC		<< ","
-			 << currentDay.MxR		<< "," 
-			 << currentDay.Mn		<< ","
+		cout << currentDay.day		<< ", "
+			 << currentDay.MxT		<< ", "
+			 << currentDay.MnT		<< ", "
+			 << currentDay.AvT		<< ", "
+			 << currentDay.AvDP		<< ", "
+			 << currentDay.HrPTPcpn << ", "
+			 << currentDay.PDir		<< ", "
+			 << currentDay.AvSp		<< ", "
+			 << currentDay.Dir		<< ", "
+			 << currentDay.MxS		<< ", "
+			 << currentDay.SkyC		<< ", "
+			 << currentDay.MxR		<< ", "
+			 << currentDay.Mn		<< ", "
 			 << currentDay.RAvSLP;
 		cout << endl;
 	}

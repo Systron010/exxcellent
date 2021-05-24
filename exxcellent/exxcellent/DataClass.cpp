@@ -22,6 +22,8 @@ void DataClass::ReadFile()
 	else {
 		// Check the file type
 		if (fileType == "csv") {
+			SEPARATOR = ',';
+			cout << "# Used SEPERATOR: " << SEPARATOR << endl;
 			ReadFile_CSV(file);
 		}		
 		else {
@@ -54,7 +56,7 @@ void DataClass::ReadFile_CSV(fstream& file)
 	// Print all column names to console
 	PrintColumnNames();
 	// Read each line of the file and save the read data to a struct vector (defined by daughter class)
-	ReadEachLine_CSV(file, currentLine);
+	ReadEachLine_CSV(file);
 	// Print number of read data sets to console
 	cout << "# " << numDataSets << " " << dataName << " were read." << endl;
 }
@@ -67,7 +69,7 @@ unsigned int DataClass::GetColumnNames_CSV(string currentLine)
 	string currentColname;
 
 	// Extract each column name
-	while (getline(strStream, currentColname, ',')) {
+	while (getline(strStream, currentColname, SEPARATOR)) {
 		// Add current column name to columnNames vector
 		columnNames.push_back(currentColname);
 	}
@@ -91,58 +93,43 @@ void DataClass::PrintColumnNames()
 }
 
 
-void DataClass::ReadEachLine_CSV(fstream& file, string currentLine)
+void DataClass::ReadEachLine_CSV(fstream& file)
 {
-
+	string currentLine;
 	// Loop over all lines in the file
 	while (getline(file, currentLine))
 	{
 		// Increase number of read data sets
-		numDataSets++;
-		
-		// Create a stringstream from current line
-		stringstream strStream(currentLine);
-		
-		// Extract all values of current line
-		float currentValue;
-		vector<float> allValuesCurrentLine;
-		unsigned int currentNumCol = 0;
-		while (strStream >> currentValue) {
-			// Save current value to allValuesCurrentLine vector
-			allValuesCurrentLine.push_back(currentValue);
-			currentNumCol++;
-			// If the next token is a comma, ignore it and move on
-			if (strStream.peek() == ',')
-				strStream.ignore();
+		numDataSets++;	
+		// Check that the currentLine has the correct number of columns
+		if (checkNumOfColumns(currentLine) ) {
+			// If yes: Pass currentLine to the parsing function (Which is overwritten by the daughter class)
+			ParsingLineAndSaveValues_CSV(currentLine);
 		}
-
-		// Checks that the number of column is correct for each line and then calls 'SaveAllValuesPerLine' to save all values for the current line to a struct data vector (defined by daughter class)
-		CheckNumberOfColumnsAndSave(currentNumCol, allValuesCurrentLine);
-
-	}
-
-}
-
-
-void DataClass::CheckNumberOfColumnsAndSave(unsigned int currentNumCol, vector<float> allValuesCurrentLine)
-{
-	if (currentNumCol == numColumns || true) {
-		SaveAllValuesPerLine(allValuesCurrentLine);
-	}
-	else if (currentNumCol < numColumns) {
-		cerr << "# ERROR: Number of columns for " << dataName << " " << numDataSets << " does NOT match number of columns in the headerline (too few columns found)! Program stopped!" << endl;
-		exit(-1);
-	}
-	else {
-		cerr << "# ERROR: Number of columns for " << dataName << " " << numDataSets << " does NOT match number of columns in the headerline (too many columns found)! Program stopped!" << endl;
-		exit(-1);
+		else {
+			cerr << "# ERROR while reading file '" << fileName << "': Number of columns/commas for line " << numDataSets + 1 << " is wrong! Program stopped!" << endl;
+			exit(-1);
+		}
+		
 	}
 }
 
 
-void DataClass::SaveAllValuesPerLine(vector<float> allValuesCurrentLine)
+bool DataClass::checkNumOfColumns(string currentLine)
 {
-	cerr << "# ERROR: If this function 'void DataClass::SaveAllValuesPerLine(vector<float> allValuesCurrentLine)' is called it was not overridden be the daughter class."
+	bool result = false;
+	// Get numbers of SEPERATORS in line
+	size_t numSeperators = count(currentLine.begin(), currentLine.end(), SEPARATOR);
+	// Check that numSeperators- +1 is euqal to number of header columns
+	if (numSeperators + 1 == numColumns)
+		result = true;
+	return result;
+}
+
+
+void DataClass::ParsingLineAndSaveValues_CSV(string currentLine)
+{
+	cerr << "# ERROR: If this function 'void DataClass::parsingIStringStream_CSV(istringstream textStream)' is called it was not overridden be the daughter class."
 		 << " But the function has to be overridden because a global valid pre-definton in 'DataClass' is unfeasible." << endl;
 	cerr << "# Program stopped!" << endl;
 	exit(-1);
