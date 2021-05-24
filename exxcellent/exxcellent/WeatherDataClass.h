@@ -1,4 +1,5 @@
-// Header for the weather data class. This class handles the weather data read from weather.csv
+// Header for the weather data class. This class handles the weather data.
+// The class inherits from DataClass
 // The data for each day are stored in a 'struct dayData' datatype
 // The private function 'void FindDayWithSmallestTempSpread()' searches the day with the smallest temperatur spread (This is the solution of the weather challenge).
 
@@ -43,9 +44,8 @@ private:
 		}
 	};
 	vector<dayData> totalDayData; // The data of all days, which means all days in the file 'fileName'
-	int numDays; // Number of all days (totalDayData.size())
 	vector<dayData>::iterator minTempSpreadDay; // Vector with the data for the day with the smallest temperatur spread (This is the solution of the weather challenge)
-	void SaveAllValuesPerDay(vector<float> allValuesPerDay); // Function to save all read values of one day to 'vector<dayData> totalDayData'
+	void SaveAllValuesPerLine(vector<float> allValuesCurrentLine); // Function to save all read values of one line (one day) to 'vector<dayData> totalDayData'
 	
 public:
 	WeatherDataClass(string in_fileName); // Class Constructor

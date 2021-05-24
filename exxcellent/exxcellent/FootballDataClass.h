@@ -1,5 +1,6 @@
-// Header for the football data class. This class handles the football data read from football.csv
-
+// Header for the football data class. This class handles the football data.
+// The class inherits from DataClass
+// The data for each team are stored in a 'struct teamData' datatype
 
 // Include standard libraries
 #include <iostream>
@@ -10,11 +11,14 @@
 #include <algorithm>
 #include <stdlib.h> 
 
+// Include own written data class
+#include "DataClass.h"
+
 // Use std namespace
 using namespace std;
 
 // Define football class
-class FootballDataClass
+class FootballDataClass : public DataClass
 {
 
 private:
@@ -34,7 +38,6 @@ private:
 			return value1 < value2;
 		}
 	};
-
 
 public:
 	FootballDataClass(string in_fileName); // Class Constructor

@@ -4,11 +4,11 @@
 WeatherDataClass::WeatherDataClass(string in_fileName)
 {
 	fileName = in_fileName;
-	dataName = "days";
+	dataName = "day(s)";
 }
 
 
-void WeatherDataClass::SaveAllValuesPerDay(vector<float> allValuesCurrentDay)
+void WeatherDataClass::SaveAllValuesPerLine(vector<float> allValuesCurrentDay)
 {
 	// Create current day struct
 	dayData currentDay;
@@ -35,7 +35,7 @@ void WeatherDataClass::SaveAllValuesPerDay(vector<float> allValuesCurrentDay)
 void WeatherDataClass::PrintAllValues()
 {
 	cout << endl;
-	cout << "# Print all read values (Can be turned off with VERBOSE=0 in 'exxcellent.cpp'):" << endl;
+	cout << "# Print all read values from '" << fileName << "' (Can be turned off with VERBOSE=0 in 'exxcellent.cpp'):" << endl;
 	PrintColumnNames();
 	// Loop over all days in 'vector<dayData> totalDayData'
 	for (size_t i = 0; i < totalDayData.size(); ++i) {
@@ -64,8 +64,15 @@ void WeatherDataClass::FindDayWithSmallestTempSpread()
 {
 	cout << endl;
 	cout << "# Find the day with the smallest temperature spread:" << endl;
-	// Search min temprature spread using std::min_element and the <operator defined in 'struct dayData' 
-	minTempSpreadDay = min_element(totalDayData.begin(), totalDayData.end());
-	cout << "  The day with the smallest temperature spread is day " << minTempSpreadDay -> day << endl;
-	cout << "  The tempereature spread is: " << minTempSpreadDay -> MxT - minTempSpreadDay -> MnT << " ab.units" << endl;
+
+	if (totalDayData.size() > 0) {
+		// Search min temprature spread using std::min_element and the <operator defined in 'struct dayData' 
+		minTempSpreadDay = min_element(totalDayData.begin(), totalDayData.end());
+		cout << "  The day with the smallest temperature spread is day " << minTempSpreadDay->day << endl;
+		cout << "  The tempereature spread is: " << minTempSpreadDay->MxT - minTempSpreadDay->MnT << " ab.units" << endl;
+	}
+	else {
+		cout << "# WARNING: No weather data loaded. So no smallest temperature spread can be found." << endl;
+	}
+
 }
