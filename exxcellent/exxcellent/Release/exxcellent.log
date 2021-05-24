@@ -1,1 +1,9 @@
-﻿LINK : fatal error LNK1104: Datei "C:\Users\Michael Mathy\Documents\GitHub\exxcellent\exxcellent\Release\exxcellent.exe" kann nicht geöffnet werden.
+﻿  DataClass.cpp
+  exxcellent.cpp
+  FootballDataClass.cpp
+  WeatherDataClass.cpp
+  Code wird generiert.
+  Previous IPDB not found, fall back to full compilation.
+  All 397 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Codegenerierung ist abgeschlossen.
+  exxcellent.vcxproj -> C:\Users\Michael Mathy\Documents\GitHub\exxcellent\exxcellent\Release\exxcellent.exe
