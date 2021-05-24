@@ -7,8 +7,11 @@ Language: C++ 14
 
 IDE: Visual Studio 2019
 
-Tasks:
 
+Branches: main: Includes Solution for weather challenge. football: includes soluton for weather and football challenge
+
+
+Tasks:
 
 
 Weather
