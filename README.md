@@ -7,6 +7,8 @@ Language: C++ 14
 
 IDE: Visual Studio 2019
 
+Data: The data given by weather.csv and football.csv are saved the folder "data".
+
 
 --- Branches: --- 
 
