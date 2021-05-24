@@ -22,7 +22,7 @@ football: includes solution for weather and football challenge at the same time 
 --- Code: --- 
 
 
-The c++ soruce and header files are saved in ".\exxcellent\exxcellent\*". The "main" function in "exxellent.cpp" creates two Objects: A "WeatherDataClass" and a "FootballDataClass". Both classes handle the two below given tasks by searching through the data. Both classes inherit variables and funtions from a base class called "DataClass". This "DataClass" contains all functions which are needed to read the data from csv-files, save them in a vector, prepare the data for the below given tasks and print them to the console if wanted.
+The c++ source and header files are saved in ".\exxcellent\exxcellent\*". The "main" function in "exxellent.cpp" creates two Objects: A "WeatherDataClass" and a "FootballDataClass". Both classes handle the two below given tasks by searching through the data. Both classes inherit variables and funtions from a base class called "DataClass". This "DataClass" contains all functions which are needed to read the data from csv-files, save them in a vector, prepare the data for the below given tasks and print them to the console if wanted.
 
 
 
