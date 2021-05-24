@@ -3,6 +3,10 @@ exxcellent programming-challenge done by Michael Mathy
 
 Start: 23.5.2021
 
+Language: C++ 14
+
+IDE: Visual Studio 2019
+
 Tasks:
 
 
