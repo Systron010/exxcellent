@@ -9,6 +9,7 @@
 
 // Include own written classes
 #include "WeatherDataClass.h"
+#include "FootballDataClass.h"
 
 // Use std namespace
 using namespace std;
