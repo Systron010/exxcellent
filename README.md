@@ -2,6 +2,7 @@
 Exxcellent programming-challenge implemented by Michael Mathy
 
 Start: 23.5.2021
+
 End: 25.5.2021
 
 Language: C++ 14
