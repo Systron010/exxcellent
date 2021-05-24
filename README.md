@@ -1,5 +1,5 @@
 # exxcellent
-exxcellent programming-challenge done by Michael Mathy
+Exxcellent programming-challenge done by Michael Mathy
 
 Start: 23.5.2021
 
@@ -8,12 +8,14 @@ Language: C++ 14
 IDE: Visual Studio 2019
 
 
-Branches: 
+--- Branches: --- 
 
 main: Includes solution for weather challenge. 
 
 football: includes solution for weather and football challenge at the same time using a main DataClass to inherit from.
 
+
+--- Code: --- 
 
 The "main" function in "exxellent.cpp" creates two Objects: A "WeatherDataClass" and a "FootballDataClass". Both classes handle the two below given tasks. Both classes inherit variables and funtions from a base class called "DataClass". This class contains all functions which are needed to read the data from csv-files, save them and print them to the console if wanted.
 
@@ -21,7 +23,7 @@ The "main" function in "exxellent.cpp" creates two Objects: A "WeatherDataClass"
 
 
 
-Tasks:
+--- Tasks: ---
 
 
 Weather
