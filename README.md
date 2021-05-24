@@ -25,7 +25,7 @@ The c++ source and header files are saved in ".\exxcellent\exxcellent\*". The "m
 
 
 
---- Tasks (Copied from exxcellent / programming-challenge ): ---
+--- Tasks (Copied from exxcellent / programming-challenge): ---
 
 
 Weather
