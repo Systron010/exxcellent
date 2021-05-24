@@ -24,12 +24,18 @@
     <ClCompile Include="FootballDataClass.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="DataClass.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="WeatherDataClass.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="FootballDataClass.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="DataClass.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
