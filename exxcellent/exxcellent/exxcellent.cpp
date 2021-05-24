@@ -33,10 +33,10 @@ int main()
    if (VERBOSE == 1)
 	   weatherData -> PrintAllValues();
    // Search day with the smallest temp spread
-   weatherData -> FindDayWithSmallestTempSpread();
+   //weatherData -> FindDayWithSmallestTempSpread();
 
    // Create football data class
-   FootballDataClass* footballData = new FootballDataClass(FILENAME_FOOTBALL);
+   //FootballDataClass* footballData = new FootballDataClass(FILENAME_FOOTBALL);
 
    cout << endl;
    cout << "# Program successfully finished." << endl;

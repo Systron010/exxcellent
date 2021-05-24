@@ -18,9 +18,6 @@ class FootballDataClass
 {
 
 private:
-	string fileName; // Name of file with the weather data
-	vector<string> columnNames; // All column names in the file 'fileName'
-	unsigned int numColumns; // Number of columns in the header. Used to check if file format of all lines is correct
 	struct teamData { // Different values for one team
 		string team; 
 		unsigned int games; 
