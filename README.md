@@ -15,7 +15,7 @@ main: Includes solution for weather challenge.
 football: includes solution for weather and football challenge at the same time using a main DataClass to inherit from.
 
 
-The main functions creates two Objects: A "WeatherDataClass" and a "FootballDataClass". Both classes handle the two below given tasks. Both classes inherit variables and funtions from a base class called "DataClass". This class contains all functions which are needed to read the data from csv-files, save them and print them to the console if wanted.
+The main function creates two Objects: A "WeatherDataClass" and a "FootballDataClass". Both classes handle the two below given tasks. Both classes inherit variables and funtions from a base class called "DataClass". This class contains all functions which are needed to read the data from csv-files, save them and print them to the console if wanted.
 
 
 
