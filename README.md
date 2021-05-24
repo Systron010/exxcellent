@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# exxcellent
+>>>>>>> 171f7e1aedf00bc8c7cb5b18ba36f1bed12503fd
 Exxcellent programming-challenge implemented by Michael Mathy
 
 Start: 23.5.2021
@@ -10,13 +14,35 @@ IDE: Visual Studio 2019
 
 Data: The data given by weather.csv and football.csv are saved the folder "data".
 
+<<<<<<< HEAD
 --- Branches: ---
 
 main: Includes solution for weather challenge.
+=======
+
+--- Branches: --- 
+
+main: Includes solution for weather challenge. 
 
 football: includes solution for weather and football challenge at the same time using a main DataClass to inherit from.
 
+
+--- Code: --- 
+
+
+The c++ source and header files are saved in ".\exxcellent\exxcellent\*". The "main" function in "exxellent.cpp" creates two Objects: A "WeatherDataClass" and a "FootballDataClass". Both classes handle the two below given tasks by searching through the data. Both classes inherit variables and funtions from a base class called "DataClass". This "DataClass" contains all functions which are needed to read the data from csv-files, save them in a vector, prepare the data for the below given tasks and print them to the console if wanted.
+
+
+
+>>>>>>> 171f7e1aedf00bc8c7cb5b18ba36f1bed12503fd
+
+football: includes solution for weather and football challenge at the same time using a main DataClass to inherit from.
+
+<<<<<<< HEAD
 --- Code: ---
+=======
+--- Tasks (Copied from exxcellent / programming-challenge ): ---
+>>>>>>> 171f7e1aedf00bc8c7cb5b18ba36f1bed12503fd
 
 The c++ source and header files are saved in ".\exxcellent\exxcellent*". The "main" function in "exxellent.cpp" creates two Objects: A "WeatherDataClass" and a "FootballDataClass". Both classes handle the two below given tasks by searching through the data. Both classes inherit variables and funtions from a base class called "DataClass". This "DataClass" contains all functions which are needed to read the data from csv-files, save them in a vector, prepare the data for the below given tasks and print them to the console if wanted.
 
