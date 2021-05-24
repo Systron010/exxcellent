@@ -8,7 +8,7 @@ Language: C++ 14
 IDE: Visual Studio 2019
 
 
-Branches: main: Includes Solution for weather challenge. football: includes soluton for weather and football challenge
+Branches: main: Includes solution for weather challenge. football: includes solution for weather and football challenge at the same time using a main DataClass to inherit from.
 
 
 Tasks:
