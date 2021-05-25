@@ -25,7 +25,7 @@ void DataClass::ReadFile()
 	if (fileType == "csv") 
 	{
 		SEPARATOR = ',';
-		cout << "# Used SEPERATOR: " << SEPARATOR << endl;
+		cout << "# Used SEPARATOR: " << SEPARATOR << endl;
 		ReadFile_CSV(file);
 	}
 	else if (fileType == "json") 

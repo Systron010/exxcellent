@@ -90,7 +90,7 @@ void WeatherDataClass::FindDayWithSmallestTempSpread()
 		// Search min temperature spread in 'totalDayData' using 'std::min_element()' and the <operator defined in 'struct dayData' 
 		minTempSpreadDay = min_element(totalDayData.begin(), totalDayData.end());
 		cout << "  The day with the smallest temperature spread is day " << minTempSpreadDay -> day << endl;
-		cout << "  The tempereature spread is: " << minTempSpreadDay -> mxT - minTempSpreadDay -> mnT << " ab.units" << endl;
+		cout << "  The temperature spread is: " << minTempSpreadDay -> mxT - minTempSpreadDay -> mnT << " ab.units" << endl;
 	}
 	else 
 	{
