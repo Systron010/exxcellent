@@ -15,13 +15,13 @@ using namespace std;
 
 // Settings and constants
 const string FILENAME_WEATHER = "./../../data/weather.csv";
-const string FILENAME_FOOTBALL = "./../../data/football.csv";
 // Verbose Level: 1: show all, 0: show minimum
 const unsigned int VERBOSE = 1;
 
-// Main funton (return=0 -> successfull, return=-1 -> error)
+// Main function (return=0 -> successfull, return=-1 -> error)
 int main()
 {
+
    cout << "# Program started." << endl;
 
    // Create weather data class
@@ -37,4 +37,5 @@ int main()
    cout << endl;
    cout << "# Program successfully finished." << endl;
    return 0;
+
 }

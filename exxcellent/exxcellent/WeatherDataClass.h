@@ -1,6 +1,6 @@
-// Header for the weather data class. This class handles the weather data read from weather.csv
+// Header for the weatherDataClass. This class handles the weather data read from weather.csv
 // The data for each day are stored in a 'struct dayData' datatype
-// The private function 'void FindDayWithSmallestTempSpread()' searches the day with the smallest temperatur spread (This is the solution of the weather challenge).
+// The private function 'void FindDayWithSmallestTempSpread()' searches the day with the smallest temperature spread (This is the solution of the weather challenge).
 
 
 // Include standard libraries
@@ -24,22 +24,24 @@ private:
 	unsigned int numColumns; // Number of columns in the header. Used to check if file format of all lines is correct
 	struct dayData { // Different values for one day
 		unsigned short int day;
-		float MxT;
-		float MnT;
-		float AvT;
-		float AvDP;
-		float HrPTPcpn;
-		float PDir;
-		float AvSp;
-		float Dir;
-		float MxS;
-		float SkyC;
-		float MxR;
-		float Mn;
-		float RAvSLP;
-		bool operator<(const dayData& other) // <Operator to search for minimum in temperatur spread (Mxt-MnT)
+		float mxT;
+		float mnT;
+		float avT;
+		float avDP;
+		float hrPTPcpn;
+		float pDir;
+		float avSp;
+		float dir;
+		float mxS;
+		float skyC;
+		float mxR;
+		float mn;
+		float rAvSLP;
+		bool operator<(const dayData& other) // <Operator to search for minimum in temperatur spread (Mxt-MnT) using 'std::min_element()'
 		{
-			return MxT - MnT < other.MxT - other.MnT;
+			float value1 = mxT - mnT;
+			float value2 = other.mxT - other.mnT;
+			return value1 < value2;
 		}
 	};
 	vector<dayData> totalDayData; // The data of all days, which means all days in the file 'fileName'
@@ -55,7 +57,7 @@ public:
 	WeatherDataClass(string in_fileName); // Class Constructor
 	void ReadFile(); // Function to read the file 'fileName'
 	void PrintAllValues(); // Function to print all read values to console
-	void FindDayWithSmallestTempSpread(); // Function to find the day with the smallest temperatur spread (This is the goal of the weather challenge)
+	void FindDayWithSmallestTempSpread(); // Function to find the day with the smallest temperature spread (This is the goal of the weather challenge)
 
 };
 
