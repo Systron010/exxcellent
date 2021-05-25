@@ -4,6 +4,7 @@ Exxcellent Programming-Challenge
 
 
 Implemented by Michael Mathy
+
 Start: 23.5.2021
 
 End: 25.5.2021
@@ -57,24 +58,24 @@ A short definition of each variable and function is given in the corresponding h
 
 If the program in the "Football Branch" is executed to total output in the console is given by:
 
+```
+\# Program started.
 
-# Program started.
+\#  Read data from file: './../../data/weather.csv'
 
-# Read data from file: './../../data/weather.csv'
+\#  Filetpye: csv
 
-# Filetpye: csv
+\#  Used SEPERATOR: ,
 
-# Used SEPERATOR: ,
-
-# Used column names:
+\#  Used column names:
 
 Day, MxT, MnT, AvT, AvDP, 1HrPTPcpn, PDir, AvSp, Dir, MxS, SkyC, MxR, Mn, RAvSLP
 
-# 30 day(s) were read.
+\# 30 day(s) were read.
 
-# Print all read values from './../../data/weather.csv' (Can be turned off with VERBOSE=0 in 'exxcellent.cpp'):
+\# Print all read values from './../../data/weather.csv' (Can be turned off with VERBOSE=0 in 'exxcellent.cpp'):
 
-# Used column names:
+\# Used column names:
 
 Day, MxT, MnT, AvT, AvDP, 1HrPTPcpn, PDir, AvSp, Dir, MxS, SkyC, MxR, Mn, RAvSLP
 
@@ -138,29 +139,29 @@ Day, MxT, MnT, AvT, AvDP, 1HrPTPcpn, PDir, AvSp, Dir, MxS, SkyC, MxR, Mn, RAvSLP
 
 30, 90, 45, 68, 63.6, 0, 240, 6, 220, 17, 4.8, 200, 41, 1022.7
 
-# End of data set.
+\# End of data set.
 
-# Find the day with the smallest temperature spread:
+\# Find the day with the smallest temperature spread:
 
   The day with the smallest temperature spread is day 14
 
   The tempereature spread is: 2 ab.units
 
-# Read data from file: './../../data/football.csv'
+\# Read data from file: './../../data/football.csv'
 
-# Filetpye: csv
+\# Filetpye: csv
 
-# Used SEPERATOR: ,
+\# Used SEPERATOR: ,
 
-# Used column names:
+\# Used column names:
 
 Team, Games, Wins, Losses, Draws, Goals, GoalsAllowed, Points
 
-# 20 team(s) were read.
+\# 20 team(s) were read.
 
-# Print all read values from './../../data/football.csv' (Can be turned off with VERBOSE=0 in 'exxcellent.cpp'):
+\# Print all read values from './../../data/football.csv' (Can be turned off with VERBOSE=0 in 'exxcellent.cpp'):
 
-# Used column names:
+\# Used column names:
 
 Team, Games, Wins, Losses, Draws, Goals, GoalsAllowed, Points
 
@@ -204,16 +205,16 @@ Derby, 38, 8, 6, 24, 33, 63, 30
 
 Leicester, 38, 5, 13, 20, 30, 64, 28
 
-# End of data set.
+\# End of data set.
 
-# Find the team with the smallest distance (absolute difference between 'Goals' and 'Goals Allowed'):
+\# Find the team with the smallest distance (absolute difference between 'Goals' and 'Goals Allowed'):
 
   The team with the smallest distance is 'Aston_Villa'
 
   The distance is: 1 goal(s)
 
-# Program successfully finished.
-
+\# Program successfully finished.
+```
 
 --- Tasks (Copied from exxcellent / programming-challenge) ---
 
