@@ -148,8 +148,8 @@ Leicester, 38, 5, 13, 20, 30, 64, 28
 
 
 **Hence, the solution of the challenges are:**
-- The day with the smallest temperature spread is day 14
-- The team with the smallest goal distance is 'Aston_Villa'
+- The day with the smallest temperature spread is day 14.
+- The team with the smallest goal distance is 'Aston_Villa'.
 
 ## --- Tasks (Copied from exxcellent/programming-challenge) ---
 
