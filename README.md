@@ -105,7 +105,7 @@ Day, MxT, MnT, AvT, AvDP, 1HrPTPcpn, PDir, AvSp, Dir, MxS, SkyC, MxR, Mn, RAvSLP
 
 # Find the day with the smallest temperature spread:
   The day with the smallest temperature spread is day 14
-  The tempereature spread is: 2 ab.units
+  The temperature spread is: 2 ab.units
 
 # Read data from file: './../../data/football.csv'
 # Filetpye: csv
@@ -146,11 +146,12 @@ Leicester, 38, 5, 13, 20, 30, 64, 28
 # Program successfully finished.
 ```
 
-Hence, the solution of the chalenges are:
-- The day with the smallest temperature spread is day 14 
+
+Hence, the solution of the challenges are:
+- The day with the smallest temperature spread is day 14
 - The team with the smallest goal distance is 'Aston_Villa'
 
-## --- Tasks (Copied from exxcellent / programming-challenge) ---
+## --- Tasks (Copied from exxcellent/programming-challenge) ---
 
 
 Weather
