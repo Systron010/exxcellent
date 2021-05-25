@@ -57,7 +57,8 @@ void WeatherDataClass::PrintAllData()
 	cout << "# Print all read values from '" << fileName << "' (Can be turned off with VERBOSE=0 in 'exxcellent.cpp'):" << endl;
 	PrintColumnNames_CSV();
 	// Loop over all days in 'vector<dayData> totalDayData'
-	for (size_t i = 0; i < totalDayData.size(); ++i) {
+	for (size_t i = 0; i < totalDayData.size(); ++i) 
+	{
 		dayData currentDay = totalDayData.at(i);
 		cout << currentDay.day		<< ", "
 			 << currentDay.mxT		<< ", "
@@ -84,13 +85,15 @@ void WeatherDataClass::FindDayWithSmallestTempSpread()
 	cout << endl;
 	cout << "# Find the day with the smallest temperature spread:" << endl;
 
-	if (totalDayData.size() > 0) {
-		// Search min temprature spread in 'totalDayData' using 'std::min_element()' and the <operator defined in 'struct dayData' 
+	if (totalDayData.size() > 0) 
+	{
+		// Search min temperature spread in 'totalDayData' using 'std::min_element()' and the <operator defined in 'struct dayData' 
 		minTempSpreadDay = min_element(totalDayData.begin(), totalDayData.end());
 		cout << "  The day with the smallest temperature spread is day " << minTempSpreadDay -> day << endl;
 		cout << "  The tempereature spread is: " << minTempSpreadDay -> mxT - minTempSpreadDay -> mnT << " ab.units" << endl;
 	}
-	else {
+	else 
+	{
 		cout << "# WARNING: No weather data loaded. So no smallest temperature spread can be found." << endl;
 	}
 }

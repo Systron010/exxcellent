@@ -47,7 +47,8 @@ void FootballDataClass::PrintAllData()
 	cout << "# Print all read values from '" << fileName << "' (Can be turned off with VERBOSE=0 in 'exxcellent.cpp'):" << endl;
 	PrintColumnNames_CSV();
 	// Loop over all teams in 'vector<teamData> totalTeamData'
-	for (size_t i = 0; i < totalTeamData.size(); ++i) {
+	for (size_t i = 0; i < totalTeamData.size(); ++i) 
+	{
 		teamData currentTeam = totalTeamData.at(i);
 		cout << currentTeam.team			<< ", "
 			 << currentTeam.games			<< ", "
@@ -68,14 +69,16 @@ void FootballDataClass::FindTeamWithSmallestDistance()
 	cout << endl;
 	cout << "# Find the team with the smallest distance (absolute difference between 'Goals' and 'Goals Allowed'):" << endl;
 
-	if (totalTeamData.size() > 0) {
+	if (totalTeamData.size() > 0) 
+	{
 		// Search min distance in 'totalTeamData' using 'std::min_element()' and the <operator defined in 'struct teamData' 
 		minDistanceTeam = min_element(totalTeamData.begin(), totalTeamData.end());
 		cout << "  The team with the smallest distance is '" << minDistanceTeam -> team << "'" << endl;
 		unsigned int minDistance = abs( minDistanceTeam -> goals - minDistanceTeam -> goalsAllowed );
 		cout << "  The distance is: " << minDistance << " goal(s)" << endl;
 	}
-	else {
+	else 
+	{
 		cout << "# WARNING: No football data loaded. So no smallest distance can be found." << endl;
 	}
 }
