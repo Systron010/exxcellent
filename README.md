@@ -17,28 +17,28 @@ Data: The data given by "weather.csv" and "football.csv" are saved the folder "d
 
 --- Branches ---
 
-main: First created branch. Includes the "WeatherDataClass" which is the solution for weather challenge.
+"main": First created branch. Includes the "WeatherDataClass" which is the solution for weather challenge.
 
-football: Second created branch. Includes a modified  "WeatherDataClass" and a new "FootballDataClass" which are the solutions for weather and football challenge at the same time using a main DataClass to inherit from.
+"football": Second created branch. Includes a modified  "WeatherDataClass" and a new "FootballDataClass" which are the solutions for weather and football challenge at the same time using a main DataClass to inherit from.
 
 
 --- Code Explanation for "Football Branch" ---
 
 The c++ source and header files are saved in ".\exxcellent\exxcellent\*".  The files are:
 
-exxellent.cpp (includes the main function)
+- exxellent.cpp (includes the main function)
 
-DataClass.h (Handles data reading from files)
+- DataClass.h (Handles data reading from files)
 
-DataClass.cpp
+- DataClass.cpp
 
-WeatherDataClass.h (Handles weather data for the weather challenge. Inherits from DataClass)
+- WeatherDataClass.h (Handles weather data for the weather challenge. Inherits from DataClass)
 
-WeatherDataClass.cpp
+- WeatherDataClass.cpp
 
-FootballDataClass.h (Handles football data for the football challenge. Inherits from DataClass)
+- FootballDataClass.h (Handles football data for the football challenge. Inherits from DataClass)
 
-FootballDataClass.cpp
+- FootballDataClass.cpp
 
 The "main()" function in "exxellent.cpp" defines the program. The function creates two Objects: A "WeatherDataClass" and a "FootballDataClass". Both classes handle the two below given tasks by searching through the given data. Both classes inherit basic variables and functions from a base class called "DataClass". This "DataClass" contains all functions which are needed to read the data from csv-files, save them in a vector, prepare the data and print them to the console if wanted.
 
