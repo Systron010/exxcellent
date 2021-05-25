@@ -1,6 +1,6 @@
 # exxcellent Challenge
 
-Exxcellent Programming-Challenge
+--- Exxcellent Programming-Challenge ---
 
 
 Implemented by Michael Mathy
