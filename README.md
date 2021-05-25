@@ -47,16 +47,16 @@ A short definition of each variable and function is given in the corresponding h
 
 ## --- Naming Scheme ---
 
-- All variable names begin with a small letter (e.g. int numColumns).
+- Variable names begin with a small letter (e.g. int numColumns).
 
-- All function and class names begin with a capital letter (e.g. string GetFileType()).
+- Function and class names begin with a capital letter (e.g. string GetFileType()).
 
-- All constant names are written completely in capital letters (e.g. const int VERBOSE).
+- Constant variable names are written completely in capital letters (e.g. const int VERBOSE).
 
 
-## --- Output of the "Football Branch" ----
+## --- Output of the "Football Branch" & Solution of the Challenge ----
 
-If the program in the "Football Branch" is executed to total output in the console is given by:
+If the program in the "Football Branch" is executed, the total output written in the console is given by:
 
 ```
 # Program started.
@@ -145,6 +145,10 @@ Leicester, 38, 5, 13, 20, 30, 64, 28
 
 # Program successfully finished.
 ```
+
+Hence, the solution of the chalenges are:
+- The day with the smallest temperature spread is day 14 
+- The team with the smallest goal distance is 'Aston_Villa'
 
 ## --- Tasks (Copied from exxcellent / programming-challenge) ---
 
