@@ -1,6 +1,6 @@
-# exxcellent Challenge
+## exxcellent Challenge
 
---- Exxcellent Programming-Challenge ---
+# --- Exxcellent Programming-Challenge ---
 
 
 Implemented by Michael Mathy
@@ -15,14 +15,14 @@ IDE: Visual Studio 2019
 
 Data: The data given by "weather.csv" and "football.csv" are saved the folder "data".
 
---- Branches ---
+# --- Branches ---
 
 "main": First created branch. Includes the "WeatherDataClass" which is the solution for weather challenge.
 
 "football": Second created branch. Includes a modified  "WeatherDataClass" and a new "FootballDataClass" which are the solutions for weather and football challenge at the same time using a main "DataClass" to inherit from.
 
 
---- Code Explanation for "Football Branch" ---
+# --- Code Explanation for "Football Branch" ---
 
 The c++ source and header files are saved in ".\exxcellent\exxcellent\*".  The files are:
 
@@ -45,7 +45,7 @@ The "main()" function in "exxellent.cpp" defines the program. The function creat
 A short definition of each variable and function is given in the corresponding header file as a comment next to its deceleration.
 
 
---- Naming Scheme ---
+# --- Naming Scheme ---
 
 - All variable names begin with a small letter (e.g. int numColumns).
 
@@ -54,7 +54,7 @@ A short definition of each variable and function is given in the corresponding h
 - All constant names are written completely in capital letters (e.g. const int VERBOSE).
 
 
---- Output of the "Football Branch" ----
+# --- Output of the "Football Branch" ----
 
 If the program in the "Football Branch" is executed to total output in the console is given by:
 
@@ -146,7 +146,7 @@ Leicester, 38, 5, 13, 20, 30, 64, 28
 # Program successfully finished.
 ```
 
---- Tasks (Copied from exxcellent / programming-challenge) ---
+# --- Tasks (Copied from exxcellent / programming-challenge) ---
 
 
 Weather
